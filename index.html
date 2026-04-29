@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Unser Haus | Homelab</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background-effects">
+        <div class="glow-orb" id="orb-left"></div>
+        <div class="glow-orb" id="orb-right"></div>
+    </div>
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle-container">
+        <button id="btn-lang-pt" class="lang-btn active">PT</button>
+        <div class="lang-divider"></div>
+        <button id="btn-lang-en" class="lang-btn">EN</button>
+    </div>
+
+    <!-- Header & Logo -->
+    <header>
+        <div class="logo-container">
+            <img src="unser_haus_logo_dark.svg" alt="Unser Haus Logo">
+        </div>
+        <div class="clock-container">
+            <div id="time" class="time">00:00</div>
+            <div id="date" class="date" data-i18n="date_loading">Carregando data...</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- App Grid (Removed per request) -->
+
+        <!-- Showcase Section -->
+        <section class="info-section showcase-section">
+            <h2 class="section-title" data-i18n="section_showcase_title">Projeto Unser Haus</h2>
+            <div class="section-accent"></div>
+            <p class="section-description" data-i18n="section_showcase_desc">Exploração visual do design de interiores e integração tecnológica.</p>
+            
+            <div class="showcase-grid">
+                <div class="showcase-item tall">
+                    <img src="showcase/IMG-20230208-WA0007.jpg" alt="Interior View">
+                </div>
+                <div class="showcase-item wide">
+                    <img src="showcase/IMG-20230125-WA0003.jpg" alt="Living & Kitchen">
+                </div>
+                <div class="showcase-item">
+                    <img src="showcase/IMG-20230131-WA0006.jpg" alt="Overhead Layout">
+                </div>
+                <div class="showcase-item">
+                    <img src="showcase/IMG-20230608-WA0000.jpg" alt="Modern Bathroom">
+                </div>
+                <div class="showcase-item">
+                    <img src="showcase/IMG-20230131-WA0005.jpg" alt="Social Area">
+                </div>
+                <div class="showcase-item">
+                    <img src="showcase/IMG-20230529-WA0019.jpg" alt="Design Detail">
+                </div>
+                <div class="showcase-item wide">
+                    <img src="showcase/IMG-20230131-WA0007.jpg" alt="Dining Flow">
+                </div>
+                <div class="showcase-item">
+                    <img src="showcase/IMG-20230530-WA0018.jpg" alt="Atmospheric Lighting">
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Environment Section -->
+        <section class="info-section">
+            <h2 class="section-title" data-i18n="section_smart_title">Ambiente Inteligente</h2>
+            <div class="section-accent"></div>
+            <p class="section-description" data-i18n="section_smart_desc">A Unser Haus é impulsionada pela Scenario Automation...</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <i data-feather="key" class="feature-icon"></i>
+                        <h3 data-i18n="feature_doors">Acessos & Portas</h3>
+                    </div>
+                    <p class="feature-desc" data-i18n="feature_doors_desc">Descrição sobre segurança e acesso.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <i data-feather="sun" class="feature-icon"></i>
+                        <h3 data-i18n="feature_lights">Iluminação</h3>
+                    </div>
+                    <p class="feature-desc" data-i18n="feature_lights_desc">Cenas e Atmosfera inteligente.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <i data-feather="layers" class="feature-icon"></i>
+                        <h3 data-i18n="feature_curtains">Cortinas & Persianas</h3>
+                    </div>
+                    <p class="feature-desc" data-i18n="feature_curtains_desc">Controle térmico de luz solar.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <i data-feather="tv" class="feature-icon"></i>
+                        <h3 data-i18n="feature_tv">Televisores</h3>
+                    </div>
+                    <p class="feature-desc" data-i18n="feature_tv_desc">Centro de entretenimento.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <i data-feather="wind" class="feature-icon"></i>
+                        <h3 data-i18n="feature_ac">Climatização</h3>
+                    </div>
+                    <p class="feature-desc" data-i18n="feature_ac_desc">Temperatura ideal remota.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <i data-feather="speaker" class="feature-icon"></i>
+                        <h3 data-i18n="feature_sound">Sistema de Som</h3>
+                    </div>
+                    <p class="feature-desc" data-i18n="feature_sound_desc">Trilha sonora em todos os ambientes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environment / Infrastructure Section -->
+        <section class="info-section">
+            <h2 class="section-title" data-i18n="section_infra_title">Infraestrutura & Rede</h2>
+            <div class="section-accent"></div>
+            <p class="section-description" data-i18n="section_infra_desc">Descrição ampla sobre Ubiquiti na casa.</p>
+            
+            <div class="infra-list">
+                <div class="infra-row">
+                    <i data-feather="cpu" class="infra-icon"></i>
+                    <div class="infra-content">
+                        <h3 data-i18n="infra_udr">UniFi Dream Router (UDR)</h3>
+                        <p data-i18n="infra_udr_desc">Dados sobre o UDR integrado e console.</p>
+                    </div>
+                </div>
+                
+                <div class="infra-row">
+                    <i data-feather="git-merge" class="infra-icon"></i>
+                    <div class="infra-content">
+                        <h3 data-i18n="infra_switch">USW-Lite-16-PoE</h3>
+                        <p data-i18n="infra_switch_desc">Switch de acesso PoE de 16 portas.</p>
+                    </div>
+                </div>
+
+                <div class="infra-row">
+                    <i data-feather="wifi" class="infra-icon"></i>
+                    <div class="infra-content">
+                        <h3 data-i18n="infra_u7pro">U7 Pro</h3>
+                        <p data-i18n="infra_u7pro_desc">Alta densidade WiFi-7 via 6GHz.</p>
+                    </div>
+                </div>
+
+                <div class="infra-row">
+                    <i data-feather="radio" class="infra-icon"></i>
+                    <div class="infra-content">
+                        <h3 data-i18n="infra_u7wall">U7 Pro Wall</h3>
+                        <p data-i18n="infra_u7wall_desc">Acesso individual de excelente cobertura local.</p>
+                    </div>
+                </div>
+
+                <div class="infra-row">
+                    <i data-feather="camera" class="infra-icon"></i>
+                    <div class="infra-content">
+                        <h3 data-i18n="infra_g5dome">G5 Dome</h3>
+                        <p data-i18n="infra_g5dome_desc">Visão panorâmica dome 2K.</p>
+                    </div>
+                </div>
+
+                <div class="infra-row">
+                    <i data-feather="eye" class="infra-icon"></i>
+                    <div class="infra-content">
+                        <h3 data-i18n="infra_g5flex">G5 Flex</h3>
+                        <p data-i18n="infra_g5flex_desc">Tamanho compacto para monitorização indoor flexível.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vendors Section -->
+        <section class="vendors-section">
+            <div class="vendors-container">
+                <a href="https://scenarioautomation.com" target="_blank" rel="noopener noreferrer" class="vendor-link" aria-label="Scenario Automation">
+                    <svg viewBox="0 0 160 40" height="35" class="vendor-logo" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="28" font-family="'Inter', sans-serif" font-weight="700" font-size="24" fill="#000" letter-spacing="1.5">SCENARIO</text>
+                    </svg>
+                </a>
+                <a href="https://ui.com" target="_blank" rel="noopener noreferrer" class="vendor-link" aria-label="Ubiquiti">
+                    <svg viewBox="0 0 140 40" height="35" class="vendor-logo" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="28" font-family="'Inter', sans-serif" font-weight="700" font-size="24" fill="#000" letter-spacing="1">UBIQUITI</text>
+                    </svg>
+                </a>
+                <a href="https://sonos.com" target="_blank" rel="noopener noreferrer" class="vendor-link" aria-label="Sonos">
+                    <svg viewBox="0 0 120 40" height="35" class="vendor-logo" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="28" font-family="'Inter', sans-serif" font-weight="800" font-size="24" fill="#000" letter-spacing="2">SONOS</text>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p data-i18n="footer_text">IDENTIDADE VISUAL &middot; UNSER HAUS HOMELAB</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

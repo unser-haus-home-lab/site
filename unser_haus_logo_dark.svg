@@ -1,0 +1,33 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#232529" />
+      <stop offset="100%" stop-color="#141517" />
+    </linearGradient>
+    <filter id="glowDark" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGradDark)" />
+
+  <g transform="translate(0, -10)">
+    <path d="M 170 180 L 170 300 C 170 360 330 360 330 300 L 330 180" 
+          fill="none" stroke="#d4d8dd" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 170 250 L 220 250" fill="none" stroke="#d4d8dd" stroke-width="26" stroke-linecap="round" />
+    <path d="M 280 250 L 330 250" fill="none" stroke="#d4d8dd" stroke-width="26" stroke-linecap="round" />
+    
+    <circle cx="250" cy="250" r="14" fill="#e67e22" filter="url(#glowDark)">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text x="250" y="405" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" 
+        font-weight="300" font-size="22" fill="#9ca3af" text-anchor="middle" letter-spacing="8">
+    UNSER HAUS
+  </text>
+</svg>

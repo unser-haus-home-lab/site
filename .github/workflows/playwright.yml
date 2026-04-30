@@ -1,10 +1,21 @@
-name: Playwright Visual Regression Tests
+name: Playwright Visual Regression Tests & Deploy
 
 on:
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   test:
@@ -32,3 +43,27 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+
+    # These steps only run if the previous step (Playwright tests) passed successfully.
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+      
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        # The root directory of the site containing index.html
+        path: '.' 
+
+  deploy:
+    # This dependency ensures the deploy job ONLY runs if the test job succeeded
+    needs: test
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

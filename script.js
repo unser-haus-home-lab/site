@@ -3,6 +3,36 @@ document.addEventListener('DOMContentLoaded', () => {
     feather.replace();
 
     /**
+     * Theme Toggle Logic
+     */
+    const defaultTheme = 'dark';
+    const savedTheme = localStorage.getItem('unser_haus_theme') || defaultTheme;
+    const btnThemeToggle = document.getElementById('btn-theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const mainLogo = document.getElementById('main-logo');
+
+    function setTheme(theme) {
+        localStorage.setItem('unser_haus_theme', theme);
+        if (theme === 'light') {
+            document.body.classList.add('light-mode');
+            themeIcon.setAttribute('data-feather', 'moon');
+            if (mainLogo) mainLogo.src = 'unser_haus_logo_light.svg';
+        } else {
+            document.body.classList.remove('light-mode');
+            themeIcon.setAttribute('data-feather', 'sun');
+            if (mainLogo) mainLogo.src = 'unser_haus_logo_dark.svg';
+        }
+        feather.replace();
+    }
+
+    btnThemeToggle.addEventListener('click', () => {
+        const currentTheme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+        setTheme(currentTheme === 'light' ? 'dark' : 'light');
+    });
+    
+    setTheme(savedTheme);
+
+    /**
      * I18N (Internationalization) Logic
      */
     const defaultLang = 'pt-BR';

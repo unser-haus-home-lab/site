@@ -20,8 +20,12 @@
         <div class="glow-orb" id="orb-right"></div>
     </div>
 
-    <!-- Language Toggle -->
+    <!-- Controls Toggle -->
     <div class="lang-toggle-container">
+        <button id="btn-theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+            <i data-feather="sun" id="theme-icon"></i>
+        </button>
+        <div class="lang-divider"></div>
         <button id="btn-lang-pt" class="lang-btn active">PT</button>
         <div class="lang-divider"></div>
         <button id="btn-lang-en" class="lang-btn">EN</button>
@@ -30,7 +34,7 @@
     <!-- Header & Logo -->
     <header>
         <div class="logo-container">
-            <img src="unser_haus_logo_dark.svg" alt="Unser Haus Logo">
+            <img id="main-logo" src="unser_haus_logo_dark.svg" alt="Unser Haus Logo">
         </div>
         <div class="clock-container">
             <div id="time" class="time">00:00</div>

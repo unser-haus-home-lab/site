@@ -1,0 +1,13 @@
+{
+  "name": "unser-haus",
+  "version": "1.0.0",
+  "description": "Unser Haus Homelab UI",
+  "scripts": {
+    "test:visual": "playwright test",
+    "test:update": "playwright test --update-snapshots"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.0",
+    "http-server": "^14.1.1"
+  }
+}
